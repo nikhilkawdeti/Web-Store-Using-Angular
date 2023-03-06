@@ -1,0 +1,28 @@
+<mat-card [ngClass]="{ 'text-center': !fullWidthMode }">
+  <div class="" [ngClass]="{ flex: fullWidthMode }">
+    <!--https://via.placeholder.com/150 is a site for images and 150 is the size-->
+    <img
+      src="https://via.placeholder.com/150"
+      [ngClass]="{ 'h-200px': !fullWidthMode, 'h-[350px]': fullWidthMode }"
+      alt=""
+      srcset=""
+      class="mb-1 mx-auto h-[200px]"
+    />
+    <div
+      class="w-full"
+      [ngClass]="{ 'px-8 flex-col justify-between ': fullWidthMode }"
+    >
+      <div class="">
+        <h5>Shoes</h5>
+        <p class="truncate hover: whitespace-normal">snilkkker</p>
+        <p *ngIf="fullWidthMode">description Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+    <div class="flex justify-between">
+      <span class="text-red-500">{{ "120" | currency }}</span>
+      <button>
+        <mat-icon class="text-grey-500">shopping_cart </mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-card>
