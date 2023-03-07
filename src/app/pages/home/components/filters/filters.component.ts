@@ -10,8 +10,10 @@ export class FiltersComponent {
 
   catagories = ['shoes', 'sports'];
 
-
+// the show catagory event emitter send or emit catagory to whovere called (showcatagory)
   onShowCatagories(catagory:string):void {
     this.showCatagory.emit(catagory);
   }
+
+  
 }

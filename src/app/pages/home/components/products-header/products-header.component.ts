@@ -11,7 +11,7 @@ export class ProductsHeaderComponent {
 @Output() columnsCountChange = new EventEmitter<number>
   
   sort = 'desc';
-  itemsShowCount = 12;
+  itemsShowCount = 3;
 
 
   onSortUpdated(newSort: string): void{

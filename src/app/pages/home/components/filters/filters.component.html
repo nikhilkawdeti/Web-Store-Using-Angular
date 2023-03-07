@@ -2,6 +2,7 @@
   <mat-expansion-panel-header>
     <mat-panel-title>catagories</mat-panel-title>
   </mat-expansion-panel-header>
+
   <mat-selection-list [multiple]="false">
     <mat-list-option *ngFor="let catagory of catagories" [value]="catagory">
       <button (click)="onShowCatagories(catagory)">{{ catagory }}</button>

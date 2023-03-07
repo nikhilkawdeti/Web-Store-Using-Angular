@@ -4,14 +4,34 @@
 >
   <mat-drawer mode="side" opened class="p-6">
     <div class="">
+      <!--(showCatagory) is the event emitter from filter component ts. -->
       <app-filters (showCatagory)="onShowCatagory($event)"></app-filters>
     </div>
   </mat-drawer>
   <mat-drawer-content class="p-6">
+    <!-- (columnCountChange) is a event emitter from product-header.component.ts) -->
     <app-products-header
       (columnsCountChange)="onColumnsCountChange($event)"
     ></app-products-header>
     <mat-grid-list gutterSize="16" cols="cols" [rowHeight]="rowHeight">
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
       <mat-grid-tile>
         <app-product-box
           class="w-full"
