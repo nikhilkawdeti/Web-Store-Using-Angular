@@ -12,7 +12,7 @@ export class FiltersComponent {
 
 // the show catagory event emitter send or emit catagory to whovere called (showcatagory)
   onShowCatagories(catagory:string):void {
-    this.showCatagory.emit(catagory);
+    this.showCatagory.next(catagory);
   }
 
   

@@ -11,13 +11,13 @@ const ROWS_HEIGHT: { [id: number]: number } = { 1: 400, 3: 335, 4: 350 };
 export class HomeComponent {
 
   cols = 3; 
-  rowHeight = ROWS_HEIGHT[this.cols];
+  rowHeight:number = ROWS_HEIGHT[this.cols];
   catagory: string | undefined;
 
   // when we click on 1 3 4 column icons it changes the views of products list
   onColumnsCountChange(columnsNumber: number) :void {
     this.cols = columnsNumber;
-    this.rowHeight = ROWS_HEIGHT[this.cols];
+    this.rowHeight = ROWS_HEIGHT[columnsNumber];
   }
 
 
