@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatGridListModule } from "@angular/material/grid-list";
@@ -17,12 +17,17 @@ import { MatListModule } from "@angular/material/list";
 import { MatTableModule } from "@angular/material/table";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatCardModule } from "@angular/material/card";
-import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
-import { FiltersComponent } from './pages/home/components/filters/filters.component';
-import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
-import { CartComponent } from './pages/cart/cart.component';
+
+import { HeaderComponent } from "./components/header/header.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { ProductsHeaderComponent } from "./pages/home/components/products-header/products-header.component";
+import { FiltersComponent } from "./pages/home/components/filters/filters.component";
+import { ProductBoxComponent } from "./pages/home/components/product-box/product-box.component";
+import { CartComponent } from "./pages/cart/cart.component";
+
+import { CartService } from "./services/cart.service";
+import { StoreService } from "./services/store.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -32,12 +37,13 @@ import { CartComponent } from './pages/cart/cart.component';
     ProductsHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
     MatSidenavModule,
     MatGridListModule,
     MatMenuModule,
@@ -49,9 +55,11 @@ import { CartComponent } from './pages/cart/cart.component';
     MatToolbarModule,
     MatTableModule,
     MatBadgeModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CartService, StoreService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
