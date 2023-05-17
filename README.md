@@ -1,6 +1,6 @@
 ## Webstore Using Angular 15+
 
-Demo Link:  https://nikhilkawdeti.github.io/Web-Store-Using-Angular/Web-Store-Using-Angular/home
+Demo Link:  https://nikhilkawdeti.github.io/Web-Store-Using-Angular/Web-Store-Using-Angular
 
 For Using Checkout Feature Using Stripe
 - On CMD
