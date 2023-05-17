@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "slobodan-webstore": {
+    "webstore": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/slobodan-webstore",
+            "outputPath": "dist/webstore",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -90,10 +90,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "slobodan-webstore:build:production"
+              "browserTarget": "webstore:build:production"
             },
             "development": {
-              "browserTarget": "slobodan-webstore:build:development"
+              "browserTarget": "webstore:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "slobodan-webstore:build"
+            "browserTarget": "webstore:build"
           }
         }
       }
