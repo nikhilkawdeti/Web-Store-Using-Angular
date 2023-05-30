@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "docs/Web-Store-Using-Angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
